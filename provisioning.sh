@@ -13,7 +13,7 @@ function main {
 	
 	installDocker
 	installNode
-
+	
 	}
 
 
@@ -48,8 +48,5 @@ function installNode {
 	sudo yum -y install yarn
 	
 }
-
-##tomcat 
-# https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-centos-7-via-yum
 
 main
