@@ -72,3 +72,6 @@ dll/
 
 #Vagrant
 .vagrant
+
+#Yarn
+yarn.lock

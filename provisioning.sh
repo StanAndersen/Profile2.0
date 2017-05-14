@@ -15,6 +15,9 @@ function main {
 	installDocker
 	installNode
 	installNodeGlobal
+	installGNOME
+	installAtom
+
 	}
 
 
@@ -64,6 +67,21 @@ function installNodeGlobal {
 	npm install --global typescript
 	npm install --global rimraf
 	
+}
+
+function installAtom {
+
+	wget https://github.com/atom/atom/releases/download/v1.16.0/atom.x86_64.rpm -O /tmp/atom.x86_64.rpm
+	sudo yum -y localinstall /tmp/atom.x86_64.rpm
+	rm /tmp/atom.x86_64.rpm
+	apm install atom-typescript
+	
+}
+
+function installGNOME {
+	sudo yum -y groupinstall "GNOME Desktop"
+	sudo systemctl set-default graphical.target
+	sudo systemctl start graphical.target
 }
 
 main
